@@ -1,0 +1,39 @@
+body {
+    font-family: "Figtree", sans-serif;
+}
+header {
+    display: flex;
+    justify-content: center;
+}
+.header-container {
+    height: 6rem;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.logo-container {
+    flex: 1;
+    padding: 1rem 0;
+}
+.logo{
+    width: auto;
+    height: 100%;
+}
+.tab-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-right: 2rem;
+}
+.tab-link {
+    list-style: none;
+    font-size: 1.25rem;
+    padding: 0.5rem 0;
+    
+}
+.tab-link:first-child {
+    border-bottom: 4px solid;
+    box-sizing: border-box;
+}
