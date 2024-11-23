@@ -6,12 +6,14 @@ header {
     justify-content: center;
 }
 .header-container {
-    height: 6rem;
+    height: 5.5rem;
     width: 100%;
     max-width: 1200px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 .logo-container {
     flex: 1;
@@ -36,4 +38,42 @@ header {
 .tab-link:first-child {
     border-bottom: 4px solid;
     box-sizing: border-box;
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.bites {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    padding-right: 2rem;
+}
+.bites > li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.bites > li > iframe {
+    height: 250px;
+    padding: 1rem;
+    border: 1px solid #cbcbcb;
+    border-radius: 1rem;
+}
+.bites > li > iframe > html {
+    height: 100vh;
+    width: 100vw;
+}
+label {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: .75rem;
 }

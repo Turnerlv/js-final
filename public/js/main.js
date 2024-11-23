@@ -15,11 +15,14 @@ const biteItem = document.querySelectorAll('li')
         bites.forEach(bite => {
             const liEl = document.createElement('li')
             const headingEl = document.createElement('h3')
+            const deleteEl = document.createElement('button')
+            deleteEl.innerText = 'Delete bite'
             liEl.id = bite._id
             liEl.innerHTML = `<iframe src="${bite.biteURL}"</iframe>`
             headingEl.innerText = bite.name
             biteList.append(liEl)
-            biteList.append(headingEl)
+            liEl.append(headingEl)
+            liEl.append(deleteEl)
         })
     }
 
@@ -45,15 +48,18 @@ intakeForm.addEventListener('submit', async function (evt) {
 
 biteList.addEventListener('click', async function (evt) {
     evt.preventDefault()
-    const biteId = evt.target.id
-    console.log(biteId)
-    
-    const response = await fetch(`http://localhost:3000/bites/${biteId}`, {
-        method: 'DELETE', 
-    })
+    const biteId = evt.target
 
-    render()
-    console.log('we re-rendered')
+    if (biteId.innerText = 'Delete bite') {
+        console.log('It is it')
+    
+        const response = await fetch(`http://localhost:3000/bites/${biteId}`, {
+            method: 'DELETE', 
+        })
+
+        render()
+        console.log('we re-rendered')
+    }
 
 })
 
