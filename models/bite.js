@@ -2,10 +2,10 @@ const mongoose = require('mongoose')
 
 const biteSchema = new mongoose.Schema({
     name: String,
-    // URL: {
-    //     type: String,
-    //     required: true
-    // },
+    biteURL: {
+        type: String,
+        required: true
+    },
     // framework:  {
     //     type: String,
     //     required: true
